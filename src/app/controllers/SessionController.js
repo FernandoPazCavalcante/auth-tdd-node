@@ -12,7 +12,7 @@ class SessionController {
         if(!password){
             return res.status(401).json({ message: 'Password required' });
         }
-
+        
         if(!(await user.checkPassword(password))){
             return res.status(401).json({ message: 'Password invalid' });
         }

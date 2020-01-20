@@ -40,7 +40,7 @@ describe('Authentication', () => {
         expect(response.status).toBe(401);
     });
 
-    it('should not authenticate with empty password', async () => {
+    it('should not authenticate an empty password', async () => {
         const user = await factory.create('User', {
             password: '123123'
         })
